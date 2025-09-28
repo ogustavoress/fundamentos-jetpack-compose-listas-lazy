@@ -25,6 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.components.GameCard
 import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.repository.getAllGames
 import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.ui.theme.FundamentosjetpackcomposelistaslazyTheme
 
@@ -70,9 +71,7 @@ fun GameScreen(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(16.dp))
         LazyColumn() {
             items(getAllGames()) {
-                Column() {
-                    Text(text = it.title)
-                }
+                GameCard(game = it)
             }
         }
     }
