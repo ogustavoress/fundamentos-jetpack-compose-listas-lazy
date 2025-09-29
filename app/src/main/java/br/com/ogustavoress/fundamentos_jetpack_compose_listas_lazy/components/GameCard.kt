@@ -12,9 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.model.Game
+import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.ui.theme.FundamentosjetpackcomposelistaslazyTheme
 
 @Composable
 fun GameCard(game: Game) {
@@ -47,5 +49,13 @@ fun GameCard(game: Game) {
 
             )
         }
+        @Preview
+        @Composable
+        fun PreviewGameCard() {
+            FundamentosjetpackcomposelistaslazyTheme {
+                GameCard(game = Game(1, "Example Game", "Example Studio", 2025))
+            }
+        }
+
     }
 }
