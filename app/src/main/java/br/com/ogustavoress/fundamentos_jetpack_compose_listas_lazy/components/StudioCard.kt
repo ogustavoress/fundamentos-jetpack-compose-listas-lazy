@@ -1,5 +1,6 @@
 package br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,20 +15,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.model.Game
 import br.com.ogustavoress.fundamentos_jetpack_compose_listas_lazy.ui.theme.FundamentosjetpackcomposelistaslazyTheme
-import java.lang.reflect.Modifier
 
 @Composable
-fun StudioCard(game: Game) {
-    Card(modifier = Modifier
-        .size(100.dp)
-        .padding(end = 4.dp)) {
+fun StudioCard(game: Game, onClick: (() -> Unit)? = null) {
+    Card(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(end = 4.dp)
+            .clickable(
+                enabled = onClick != null,
+                onClick = { onClick?.invoke() }
+            )
+    ) {
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxSize()
-        ) {
-            Text(text = game.studio)
-        }
+        ) { Text(text = game.studio) }
     }
 }
 @Preview(showBackground = true, name = "Studio Card Preview")
