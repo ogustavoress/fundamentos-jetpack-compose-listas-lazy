@@ -49,6 +49,16 @@ O repositório demonstra como exibir dados de forma eficiente, organizar itens e
 
 ---
 
+## Demonstração do APP
+
+Tela principal com lista de jogos:
+![Lista de jogos](images/image1.jpeg)
+
+Tela com filtro aplicado:
+![Filtro por estúdio](images/image2.jpeg)
+
+---
+
 ## Como Executar
 
 1. Clone o repositório:
