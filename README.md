@@ -51,11 +51,10 @@ O repositório demonstra como exibir dados de forma eficiente, organizar itens e
 
 ## Demonstração do APP
 
-Tela principal com lista de jogos:
-![Lista de jogos](images/image1.jpeg)
-
-Tela com filtro aplicado:
-![Filtro por estúdio](images/image2.jpeg)
+<p align="center">
+  <img src="images/image1.jpeg" alt="Lista de jogos" width="300"/>
+  <img src="images/image2.jpeg" alt="Filtro aplicado" width="300"/>
+</p>
 
 ---
 
